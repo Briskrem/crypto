@@ -1,7 +1,9 @@
 const app = require('./app')
+const {PORT} = require('./config')
+require('colors')
 
-const server = app.listen(3002, ()=>{
-    console.log('connected on port 3002')
+const server = app.listen(PORT, ()=>{
+    console.log(`connected on port ${PORT}`.yellow)
 })
 
 module.exports = server
